@@ -26,3 +26,135 @@ h1 {
   height: 500px;
   margin-top: 30px;
 }
+
+/* ===== MOBILE RESPONSIVE DESIGN ===== */
+
+/* Prevent horizontal scrolling */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Responsive containers */
+.container,
+.main-content,
+.dashboard {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Responsive images and charts */
+img, canvas, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+
+    .container,
+    .main-content,
+    .dashboard {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Stack dashboard sections vertically */
+    .row,
+    .grid,
+    .dashboard-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Full-width cards */
+    .card,
+    .chart-container,
+    .weather-card,
+    .stat-card {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Responsive headings */
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    /* Mobile-friendly buttons */
+    button,
+    .btn {
+        max-width: 100%;
+        min-height: 44px;
+        font-size: 14px;
+    }
+
+    /* Responsive forms */
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    /* Tables scroll horizontally */
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Responsive navigation */
+    nav {
+        max-width: 100%;
+    }
+
+    /* Improve text readability */
+    p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 480px) {
+
+    .container,
+    .main-content,
+    .dashboard {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .card,
+    .weather-card,
+    .stat-card {
+        padding: 12px;
+    }
+}
